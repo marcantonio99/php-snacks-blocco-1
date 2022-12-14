@@ -18,9 +18,10 @@ $arrayAlunni = [
 ];
 
 for( $i=0; $i<count($arrayAlunni); $i++ ){
-    $mediaVoti = / count( $arrayAlunni[$i]['voti'] );
+    $mediaVoti = array_sum( $arrayAlunni[$i]['voti'] ) / count( $arrayAlunni[$i]['voti'] );
 
     echo $arrayAlunni[$i]['nome'] . '-' . $arrayAlunni[$i]['cognome']. ' la media dei voti è: ' . $mediaVoti;
+    echo "<br>";
 }
 
 
