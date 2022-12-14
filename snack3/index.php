@@ -44,8 +44,24 @@ $posts = [
     ],
 ];
 
-echo "<pre>";
-var_dump( $posts );
-echo "</pre>";
+//var_dump( $posts['01/01/2010'] );
+
+$arraDate = array_keys( $posts );
+//var_dump( $posts[ $arraDate[0] ] );
+
+for( $i = 0; $i < count($posts); $i++ ){
+    echo $arraDate[$i];
+    echo "<br>";
+
+    for( $k = 0; $k < count( $posts[ $arraDate[$i] ] ); $k++ ){
+       echo $posts[ $arraDate[$i] ][$k]['title'];
+       echo "<br>";
+       echo $posts[ $arraDate[$i] ][$k]['author'];
+       echo "<br>";
+       echo $posts[ $arraDate[$i] ][$k]['text'];
+       echo "<br>";
+       echo "<br>"; 
+    }
+}
 
 ?>
